@@ -1,0 +1,16 @@
+a=int(input())
+l=[]
+l1=[]
+for i in range(0,a):
+    b=int(input())
+    l.append(b)
+#print(l)
+for i in l:
+    c=min(l)
+    l1.append(c)
+    #print(l1)
+    v=l.index(c)
+    v1=(l[0:v]+l[v+1:])
+    #print(v1)
+    l=v1
+    print(l1)
