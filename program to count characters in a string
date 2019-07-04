@@ -1,0 +1,12 @@
+1.
+str=input(&quot;Enter a string&quot;)
+c=len(str)
+print(c)
+
+str=input(“Enter a sttring”).split()
+l1=list(str)
+count=0
+for I in l1:
+for j in i:
+count=count+1
+print(“No of characters are:”,count)
