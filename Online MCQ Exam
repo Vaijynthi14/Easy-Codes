@@ -1,0 +1,45 @@
+qn=[{'q_id':'q1','q_description':'author of python','q_options':['Guido','stevejobs','james','patrick'],'q_ans':'Guido'},
+      {'q_id':'q2','q_description':'Books of python','q_options':['vol 1','vol 2','vol 3','vol 4'],'q_ans':'vol2'},
+      {'q_id':'q3','q_description':'ref of python','q_options':['ref 1','ref 2','ref 3','ref 4'],'q_ans':'ref 4'}]
+for i,j in qn[0].items():
+    if i == 'q_ans':
+        continue
+    else:
+        print(j)
+b=len(qn)
+c=0
+s=0
+while(True):
+    a=input("Enter an op")
+    if (a=="next"):
+        c=c+1
+        if c>=0 and c<=b:
+            for i,j in qn[c].items():
+                if i == 'q_ans':
+                    continue
+                else:
+                    print(j)
+        else:
+            print("No such qns")
+    elif (a=="previous"):
+        c=c-1
+        if c>=0 and c<=b:
+            for i,j in qn[c].items():
+                if i == 'q_ans':
+                    continue
+                else:
+                    print(j)
+        else:
+            print("No prevs qns")
+    elif (a=="answer"):
+        ans=int(input("Enter option"))
+        index=qn[c]['q_options'].index(qn[c]['q_ans'])
+        if index==ans:
+            s=s+1
+            print("Submitted")
+        else:
+            s=0
+    elif (a=="finish"):
+        print("Yur score is",s)
+        break
+        
