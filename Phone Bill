@@ -1,0 +1,74 @@
+str1=(input("Enter")).split()
+l=[]
+q=[]
+z1=z=0
+for i in range(0,len(str1)):
+    a=str1[i].split(",")
+    l.append(a)
+print(l)
+t=[]
+for i in range(0,len(l)):
+    t.append(l[i][0])
+print(t)
+t1=[]
+for i in range(0,len(t)):
+    x=t[i].split(":")
+    t1.append(x)
+print(t1)          
+num=[]
+for i in range(0,len(t)):
+    num.append(l[i][1])
+print(num)
+num1=[]
+for i in range(0,len(num)):
+    y=num[i].split("-")
+    num1.append(y)
+print(num1)
+for i in range(0,len(t1)):
+    z = int((t1[i][1])) * 60
+    if(z<300) and int((t1[i][2])) >0:
+        z=z+int(t1[i][2])
+        z=z*3
+        #print(z)
+        q.append(z)
+    elif(z<300) and int((t1[i][2]))==0:
+        z=z*3
+        #print(z)
+        q.append(z)
+    elif(z>=300) and int((t1[i][2]))>0:
+        z=z//60
+        #print(z)
+        z=z+1
+        #print(z)
+        z=z*150
+        #print(z)
+        q.append(z)
+    elif(z>=300) and int((t1[i][2]))==0:
+        z=z//60
+        z=z*150
+        #print(z)
+        q.append(z)
+print(q)
+k=[]
+k1=[]
+k2=[]
+for i in range(0,len(num)):
+    if num.count(num[i])>1:
+        print(i)
+        k.append(i)
+#print(k)
+for i in range(len(q)):
+    for j in k:
+        if i==j:
+            k1.append(q[i])
+                       
+print(sum(k1))
+for i in range(len(q)):
+    for j in k:
+        if i==j:
+            q.pop(i)
+print(q)
+    
+
+    
+    
