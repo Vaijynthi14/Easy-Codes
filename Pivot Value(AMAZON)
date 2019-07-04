@@ -1,0 +1,18 @@
+l=[]
+l1=[]
+l2=[]
+l3=[]
+n=int(input("Size"))
+for i in range(0,n):
+a=int(input())
+l.append(a)
+print(l)
+k=int(input("pivot"))
+for i in l:
+if i < k:
+l1.append(i)
+elif i==k:
+l2.append(i)
+elif i>k:
+l3.append(i)
+print(l1+l2+l3)
