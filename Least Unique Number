@@ -1,0 +1,12 @@
+l=[]
+l1=[]
+n=int(input(&quot;Size&quot;))
+for i in range(0,n):
+b=int(input())
+l.append(b)
+
+print(l)
+for i in range(0,len(l)):
+if l.count(l[i])==1:
+l1.append(l[i])
+print(min(l1))
