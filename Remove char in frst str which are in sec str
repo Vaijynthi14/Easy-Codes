@@ -1,0 +1,6 @@
+
+str=input(&quot;Enter a frst str&quot;)
+str1=input(&quot;Enter a sec str&quot;)
+for i in range(0,len(str)):
+if str[i] not in str1:
+print(str[i],end=&quot;&quot;)
