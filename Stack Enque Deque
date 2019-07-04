@@ -1,0 +1,38 @@
+a=int(input())
+l=[]
+l1=[]
+l2=[]
+l3=[]
+for i in range(0,a):
+b=int(input())
+l.append(b)
+l3.append(b)
+print(l)
+l1.append(l[0])
+l.pop(0)
+
+print(l)
+print(l1)
+l2=l[::-1]
+print(l2)
+for i in l1:
+l2.append(i)
+print(l2)
+if l3[::-1]==l2:
+print("True")
+
+else:
+print("False")
+"""O/P:
+5
+5
+1
+2
+3
+4
+[5, 1, 2, 3, 4]
+[1, 2, 3, 4]
+[5]
+[4, 3, 2, 1]
+[4, 3, 2, 1, 5]
+True"""
