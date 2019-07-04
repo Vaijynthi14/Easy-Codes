@@ -1,0 +1,12 @@
+a=input()
+c=0
+d=0
+for i in a:
+if i ==&quot;(&quot;:
+c=c+1
+elif i==&quot;)&quot;:
+d=d+1
+if c&lt;d:
+print(c+c)
+elif c&gt;d:
+print(d+d)
