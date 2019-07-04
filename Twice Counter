@@ -1,0 +1,13 @@
+t=int(input(&quot;Enter testcase&quot;))
+l=[]
+for i in range(0,t):
+str=input(&quot;Enter a sentence&quot;).split()
+print(str)
+for j in str:
+print(j)
+if j not in l:
+if(str.count(j))==2:
+l.append(j)
+print(len(l))
+str=[]
+l=[]
